@@ -56,6 +56,7 @@ function remove(id) {
         })
 }
 
+// *** STRETCH *** //
 function addStep(step, scheme_id) {
     //takes step object & scheme id
     //inserts step into db, correctly linking it to the intended schema
