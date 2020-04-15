@@ -1,5 +1,5 @@
 -- Multi-Table Query Practice
-
+-- // *** MVP *** // --
 -- Display the ProductName and CategoryName for all products in the database. Shows 77 records.
 SELECT p.ProductName
     , c.CategoryName 
