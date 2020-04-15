@@ -29,3 +29,13 @@ SELECT o.id as order_id
 FROM [Order] o
 JOIN Customer c ON o.CustomerId = c.id
 JOIN Employee e ON o.EmployeeId = e.id;
+
+-- // *** STRETCH *** // --
+-- Displays CategoryName and a new column called Count that shows how many products are in each category. Shows 8 records.
+SELECT COUNT(DISTINCT CategoryID) FROM Products
+
+-- Display OrderID and a column called ItemCount that shows the total number of products placed on the order. Shows 196 records.
+SELECT DISTINCT OrderID
+    , (COUNT(Distinct ProductID) * Quantity) as ItemCount
+FROM OrderDetails
+GROUP BY OrderId;
