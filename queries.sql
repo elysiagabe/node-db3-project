@@ -9,7 +9,7 @@ JOIN Category c ON p.CategoryId = c.id;
 -- Display the order Id and shipper CompanyName for all orders placed before August 9 2012. Shows 429 records.
 SELECT o.Id
     , s.CompanyName
-FROM Order o
+FROM [Order] o
 JOIN Shipper s ON o.ShipVia = s.Id
 WHERE o.OrderDate < '2012-08-09';
 
@@ -26,6 +26,6 @@ ORDER BY p.ProductName;
 SELECT o.id as order_id
     , c.CompanyName as customer_company
     , e.LastName as employee_last_name
-FROM Order o
+FROM [Order] o
 JOIN Customer c ON o.CustomerId = c.id
-JOIN Employee e ON o.EmployeeId = e.id
+JOIN Employee e ON o.EmployeeId = e.id;
